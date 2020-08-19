@@ -19,7 +19,7 @@
           <b-nav-item to="/blogs">博客</b-nav-item>
           <b-nav-item-dropdown text="分类" left>
             <b-dropdown-item
-              v-for="(cate, index) in $store.state.cates"
+              v-for="(cate, index) in $store.state.cates.cates"
               :key="'nav-cate-' + index"
               :to="`/cate/${cate._id}`"
             >

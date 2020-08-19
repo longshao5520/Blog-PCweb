@@ -11,7 +11,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BackTop from "@/components/BackTop";
-import { mapActions } from "vuex";
+import { mapMutations } from "vuex";
 
 export default {
   components: {
@@ -20,10 +20,12 @@ export default {
     BackTop
   },
   methods: {
-    ...mapActions(["getCates"])
+    ...mapMutations("cates", ["saveCates"])
   },
   created() {
-    this.getCates(this.$axios);
+    this.$axios.$get("cates").then(res => {
+      this.saveCates(res.data);
+    });
   }
 };
 </script>
