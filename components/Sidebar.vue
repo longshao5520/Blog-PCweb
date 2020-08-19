@@ -11,7 +11,6 @@
         >
           {{ tag }}
         </el-tag>
-        <!-- <el-tag type="info" effect="dark" class="mt-2">NodeJS</el-tag> -->
       </b-card-text>
     </b-card>
     <b-card no-body header="所有分类" class="mt-4 mb-4">
@@ -23,7 +22,6 @@
         >
           编程技术
         </b-list-group-item>
-        <!-- <b-list-group-item>编程技术</b-list-group-item> -->
       </b-list-group>
     </b-card>
   </b-col>

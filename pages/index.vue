@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-    <b-container class="bv-example-row pt-4 pb-4">
+    <b-container class="bv-example-row pt-4 pb-4" style="min-height: calc(100vh - 20rem);">
       <b-row class="justify-content-md-center">
         <h1 class="pb-4 m-4" style="text-align: center;">My Project</h1>
       </b-row>
@@ -85,23 +85,6 @@ export default {
   animation: mymove 15s ease infinite;
   z-index: -1;
 }
-@keyframes mymove {
-  0% {
-    background-position: 0% 0%;
-  }
-  25% {
-    background-position: 25% 75%;
-  }
-  50% {
-    background-position: 50% 100%;
-  }
-  75% {
-    background-position: 75% 25%;
-  }
-  100% {
-    background-position: 100% 0%;
-  }
-}
 .head {
   margin-top: 5rem;
   width: 100%;
@@ -158,7 +141,23 @@ export default {
     }
   }
 }
-
+@keyframes mymove {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 25% 75%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  75% {
+    background-position: 75% 25%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
 @keyframes wave {
   to {
     transform: scale(1.5);
@@ -182,7 +181,6 @@ export default {
     -webkit-transform: rotate(360deg);
   }
 }
-
 .cardimg {
   display: block;
   height: 300px;
