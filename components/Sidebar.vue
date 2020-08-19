@@ -1,5 +1,5 @@
 <template>
-  <b-col md="3">
+  <b-col md="3" class="d-none d-lg-block">
     <b-card header="所有标签" header-tag="header" class="mt-4">
       <b-card-text>
         <el-tag
@@ -16,11 +16,11 @@
     <b-card no-body header="所有分类" class="mt-4 mb-4">
       <b-list-group flush>
         <b-list-group-item
-          v-for="(cate, index) in cates"
+          v-for="(cate, index) in $store.state.cates"
           :key="'cate' + index"
-          :to="`/cate/${cate.id}`"
+          :to="`/cate/${cate._id}`"
         >
-          编程技术
+          {{ cate.title }}
         </b-list-group-item>
       </b-list-group>
     </b-card>
@@ -30,8 +30,7 @@
 <script>
 export default {
   props: {
-    tags: [],
-    cates: []
+    tags: []
   }
 };
 </script>

@@ -17,6 +17,15 @@
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
           <b-nav-item to="/blogs">博客</b-nav-item>
+          <b-nav-item-dropdown text="分类" left>
+            <b-dropdown-item
+              v-for="(cate, index) in $store.state.cates"
+              :key="'nav-cate-' + index"
+              :to="`/cate/${cate._id}`"
+            >
+              {{ cate.title }}
+            </b-dropdown-item>
+          </b-nav-item-dropdown>
           <b-nav-item to="/tags">标签</b-nav-item>
           <b-nav-item to="/Timeline">时间轴</b-nav-item>
         </b-navbar-nav>
